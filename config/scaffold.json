@@ -1,0 +1,10 @@
+{
+	"app": {
+		"gitlab": {
+			"repos": "aspfe/ui_library"
+		},
+		"github": {
+			"repos": "zhoumingmogu/yun-cli"
+		}
+	}
+}

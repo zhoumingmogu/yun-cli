@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+
+// setting version
+program.version(require('../package').version);
+program.usage('<command> [options]');
+
+// seeting init
+program
+	.command('init <name>')
+	.description('init app')
+	.option('-t, --target <target>')
+	.option('-s, --source <source>')
+	.action(require('../lib/commands/init'));
+
+program.parse(process.argv);
+
+if (program.args.length <= 0) program.help();
